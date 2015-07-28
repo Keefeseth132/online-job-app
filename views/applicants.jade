@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	.container
+		h1 Applicants
+			for applicant in applicants
+				h4
+					a( href="/applicants/#{applicant._id}")= applicant.name
+				h4
+					a( href="/delete/#{applicant._id}" ).delete-button delete
+				
